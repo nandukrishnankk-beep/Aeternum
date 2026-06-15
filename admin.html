@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Aeternum Innovate</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="logo">
+          <div class="logo-mark"><img src="assets/logo.jpeg" alt="Aeternum Innovate logo"></div>
+          <div>
+            Admin<br />
+            <small style="font-weight:500;color:#b7aa89;">Dashboard</small>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <button id="logout-btn" class="btn btn-dark" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Manage Content</h1>
+        <section class="section">
+          <h2>Announcements</h2>
+          <form id="announcement-form" class="form-grid">
+            <input id="announcement-id" type="hidden" />
+            <input id="announcement-title" class="input" placeholder="Announcement Title" required />
+            <textarea id="announcement-message" class="textarea" placeholder="Announcement Message" required></textarea>
+            <div class="form-actions" style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button id="announcement-save" class="btn btn-primary" type="submit">Save Announcement</button>
+              <button id="announcement-cancel" class="btn btn-dark" type="button">Cancel</button>
+            </div>
+          </form>
+          <div id="announcement-list" class="table-list" style="margin-top:20px;"></div>
+        </section>
+        <section class="section">
+          <h2>Blog Posts</h2>
+          <form id="blog-form" class="form-grid">
+            <input id="blog-id" type="hidden" />
+            <input id="blog-title" class="input" placeholder="Blog Title" required />
+            <input id="blog-summary" class="input" placeholder="Summary" required />
+            <input id="blog-image" class="input" placeholder="Image URL" required />
+            <textarea id="blog-content" class="textarea" placeholder="Blog Content (HTML allowed)" required></textarea>
+            <div class="form-actions" style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button id="blog-save" class="btn btn-primary" type="submit">Save Blog Post</button>
+              <button id="blog-cancel" class="btn btn-dark" type="button">Cancel</button>
+            </div>
+          </form>
+          <div id="blog-list" class="table-list" style="margin-top:20px;"></div>
+        </section>
+        <div id="admin-feedback" class="small" style="display:none;margin-top:16px;"></div>
+      </div>
+    </main>
+    <script src="assets/admin.js"></script>
+  </body>
+</html>
